@@ -1,0 +1,327 @@
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+.navbar {
+    padding: 12px 0;
+}
+
+.nav-link {
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.min-vh-600 { min-height: 600px; }
+
+.hero-bg {
+    object-position: top center; /* عشان وش الراجل يفضل باين */
+    z-index: 0;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 991px) {
+    .display-3 { font-size: 2.5rem; }
+}
+
+/* Hero Style End  */
+#about {
+    background-color: #dddf7c2d;
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+}
+
+.reveal-left.active, .reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#about img {
+    transition: transform 0.5s ease;
+}
+
+#about img:hover {
+    transform: scale(1.02);
+}
+/* About End  */
+.overview-card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.overview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+}
+
+/* زر التواصل */
+.hover-lift {
+    transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
+}
+
+/* تباعد الحروف للعناوين الصغيرة */
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.overview-card h4 {
+    color: #0f172a;
+    transition: 0.3s;
+}
+
+.overview-card:hover h4 {
+    color: #ffc107;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* الألوان المخصصة */
+.bg-custom-gray {
+    background-color: #f2f4f7 !important; /* رمادي فاتح مريح للعين */
+}
+
+.text-navy {
+    color: #0f172a !important; /* كحلي غامق للمقاولات */
+}
+
+.bg-navy {
+    background-color: #0f172a !important;
+}
+/* overview end  */
+.bg-custom-gray { background-color: #f4f7fa; }
+.text-navy { color: #0f172a; }
+
+.service-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.img-container {
+    height: 200px;
+    overflow: hidden;
+    background-color: #ddd; /* لون مؤقت مكان الصورة */
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12) !important;
+}
+
+.card-body-content {
+    padding: 25px;
+}
+
+.service-card h5 {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+/* Free end ******** */
+.bg-custom-gray { background-color: #f2f4f7; }
+.text-navy { color: #0f172a; }
+
+.feature-card {
+    background: #ffffff;
+    border-radius: 30px; /* زوايا دائرية كبيرة زي الصورة */
+    padding: 40px 30px;
+    position: relative;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* الترقيم الشفاف (01, 02...) */
+.feature-number {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: rgba(15, 23, 42, 0.04); /* لون خفيف جداً */
+    line-height: 1;
+    pointer-events: none;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: #f8f9fa;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.feature-card:hover .feature-icon {
+    background: #ffc107;
+    color: #fff;
+} 
+/* Features end */
+.contact-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0369a1 100%);
+    overflow: hidden;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05); /* تأثير زجاجي */
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 40px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffc107;
+}
+
+/* زر الواتساب */
+.btn-success {
+    background-color: #25d366 !important;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    transform: scale(1.05);
+    background-color: #128c7e !important;
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 30px 15px;
+    }
+}
+/* Contact End  */
+.bg-navy {
+    background-color: #0f172a !important; /* لون الكحلي الغامق المتناسق مع الموقع */
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #ffc107; /* اللون الأصفر عند التمرير */
+    transform: translateX(-5px); /* حركة بسيطة لليمين لأن الموقع عربي */
+}
+
+/* ضبط المسافات في الموبايل */
+@media (max-width: 767.98px) {
+    footer {
+        text-align: center;
+    }
+    .footer-links a i {
+        display: none; /* إخفاء السهم في الموبايل لشكل أنظف */
+    }
+    .d-flex.align-items-center {
+        justify-content: center;
+    }
+}
+/* Footer End  */
+
